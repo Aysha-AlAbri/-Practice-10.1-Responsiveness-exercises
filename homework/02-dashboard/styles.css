@@ -93,4 +93,61 @@ img { display: block; max-width: 100%; height: auto; }
 .progress span { display: block; height: 100%; background: var(--accent); border-radius: 99px; }
 
 /* ===== YOUR CODE — layout + responsiveness ===== */
-
+.topbar-inner{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.user{
+  display: flex;
+  align-items: center;
+}
+.dash{
+  display: grid;
+  grid-template-columns: repeat(4,minmax(0,1fr));
+  gap: 1rem;
+}
+.chart{
+  display: grid;
+  grid-column: 1/4;
+  grid-row: 2;
+}
+.activity{
+  grid-column: 4;
+  grid-row: 2/4;
+}
+.goals{
+  grid-column: 1/4;
+  grid-row: 3;
+}
+.act {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+@media(max-width:900px){
+  .dash {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .chart {
+      grid-column: 1 / 3;
+      grid-row: auto;
+    }
+    .activity {
+      grid-column: 1;
+      grid-row: auto;
+    }
+    .goals {
+      grid-column: 2;
+      grid-row: auto;
+    }
+  }
+    @media(max-width:600px) {
+      .dash{
+      grid-template-columns: 1fr;
+    }
+  .chart, .activity, .goals{
+    grid-column: 1;
+    grid-row: auto;
+  }
+ }
