@@ -87,4 +87,49 @@ img { display: block; max-width: 100%; height: auto; }
 .leader { border-bottom: 2px dotted #9ca3af; }
 
 /* ===== YOUR CODE — layout + responsiveness ===== */
-
+.special {
+  display: flex;
+  gap:1rem;
+}
+.special-img{
+  width: 40%px; 
+  height:auto;
+  min-width:0;
+  object-fit: cover;
+}
+.special-text{
+  flex:1;
+  min-width: 0;
+  align-self: center;
+}
+.menu{
+  display: grid;
+  grid-template-columns: repeat(2,minmax(0,1fr));
+  gap:2rem;
+}
+.item-row{
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+.leader{
+  flex:1;
+}
+@media(max-width:900px){
+  .special-img{
+    width: 40%;
+    
+  }
+}
+@media(max-width:600px){
+  .special{
+    flex-direction: column;
+  }
+  .special-img{
+    width: 100%;
+    height: auto;
+  }
+  .menu{
+    grid-template-columns: 1fr;
+  }
+}       
