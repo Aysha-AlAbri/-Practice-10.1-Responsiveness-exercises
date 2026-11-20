@@ -78,4 +78,45 @@ img { display: block; max-width: 100%; height: auto; }
 .hero-img { border-radius: var(--radius); box-shadow: 0 20px 40px rgba(79, 70, 229, 0.2); }
 
 /* ===== YOUR CODE — layout + responsiveness ===== */
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
 
+}
+
+.hero h1 {
+  font-size: 50px;
+}
+
+.hero-stats {
+  display: flex;
+  gap: 1rem;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+@media (max-width: 900px) {
+  .hero-inner {
+    grid-template-columns: 1fr;
+    justify-content: center;
+    justify-items: start;
+  }
+
+  .hero-img {
+    max-width: 100%;
+
+
+  }
+}
+
+@media(max-width:500px) {
+  .hero h1 {
+    font-size: 20px;
+  }
+
+}
