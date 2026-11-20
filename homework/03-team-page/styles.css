@@ -82,4 +82,40 @@ img { display: block; max-width: 100%; height: auto; }
 .join > * + * { margin-top: 0.75rem; }
 
 /* ===== YOUR CODE — layout + responsiveness ===== */
-
+.team-head{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.team{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.member{
+  flex-basis: calc((100% - 3 * 1.5rem) / 4);
+}
+.join{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+@media(max-width:900px){
+.member {
+    flex-basis: calc((100% - 2 * 1rem) / 3);
+    }
+   
+}
+@media(max-width:600px){
+    .member {
+        flex-basis: calc((100% - 1rem) / 2);
+      }
+    .team-head{
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+   
+}
